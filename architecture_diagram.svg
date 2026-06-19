@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 660" width="1180" height="660" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1180" height="660" fill="#ffffff"/>
+  <rect x="6" y="6" width="1168" height="648" rx="14" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- title -->
+  <text x="590" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#0f3d3a">AeroGrid &#8212; Real-Time Turbine Monitoring Architecture</text>
+  <text x="590" y="66" text-anchor="middle" font-size="13" fill="#475569">High-volume IoT telemetry ingestion &#183; real-time anomaly detection &#183; tiered hot / cold storage</text>
+
+  <!-- arrows -->
+  <line x1="230" y1="310" x2="298" y2="310" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="264" y="301" text-anchor="middle" font-size="10" fill="#64748b">stream</text>
+  <line x1="530" y1="310" x2="598" y2="310" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="830" y1="292" x2="898" y2="165" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="862" y="232" text-anchor="middle" font-size="10" fill="#64748b">alerts</text>
+  <line x1="830" y1="310" x2="898" y2="310" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="830" y1="328" x2="898" y2="455" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="862" y="402" text-anchor="middle" font-size="10" fill="#64748b">archive</text>
+
+  <!-- B1 Sensors -->
+  <rect x="30" y="255" width="200" height="110" rx="10" fill="#e0f2fe" stroke="#0e7490" stroke-width="2"/>
+  <text x="130" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#0f3d3a">Wind Turbine Fleet</text>
+  <text x="130" y="306" text-anchor="middle" font-size="12.5" fill="#0e7490">IoT Sensors</text>
+  <text x="130" y="328" text-anchor="middle" font-size="11" fill="#64748b">Emits: timestamp, temp,</text>
+  <text x="130" y="344" text-anchor="middle" font-size="11" fill="#64748b">RPM, vibration</text>
+
+  <!-- B2 Ingestion -->
+  <rect x="300" y="255" width="230" height="110" rx="10" fill="#e0e7ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="415" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#0f3d3a">Ingestion Layer</text>
+  <text x="415" y="306" text-anchor="middle" font-size="12.5" fill="#4338ca">Apache Kafka / AWS Kinesis</text>
+  <text x="415" y="328" text-anchor="middle" font-size="11" fill="#64748b">Message queue buffers the</text>
+  <text x="415" y="344" text-anchor="middle" font-size="11" fill="#64748b">massive, non-stop stream</text>
+
+  <!-- B3 Processing -->
+  <rect x="600" y="255" width="230" height="110" rx="10" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="715" y="284" text-anchor="middle" font-size="15" font-weight="700" fill="#0f3d3a">Stream Processing</text>
+  <text x="715" y="306" text-anchor="middle" font-size="12.5" fill="#ea580c">AWS Lambda</text>
+  <text x="715" y="328" text-anchor="middle" font-size="11" fill="#64748b">Real-time anomaly checks:</text>
+  <text x="715" y="344" text-anchor="middle" font-size="11" fill="#64748b">avg temp &#62; 85&#176;C OR vib &#62; 15 mm/s</text>
+
+  <!-- B4 Alerting -->
+  <rect x="900" y="110" width="250" height="105" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="1025" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#0f3d3a">Alerting &#38; Dashboard</text>
+  <text x="1025" y="159" text-anchor="middle" font-size="12.5" fill="#15803d">Amazon SNS + Dashboard</text>
+  <text x="1025" y="180" text-anchor="middle" font-size="11" fill="#64748b">Engineers alerted the moment</text>
+  <text x="1025" y="196" text-anchor="middle" font-size="11" fill="#64748b">a turbine breaches limits</text>
+
+  <!-- B5 Hot storage -->
+  <rect x="900" y="257" width="250" height="105" rx="10" fill="#ffe4e6" stroke="#be123c" stroke-width="2"/>
+  <text x="1025" y="285" text-anchor="middle" font-size="15" font-weight="700" fill="#0f3d3a">Hot Storage</text>
+  <text x="1025" y="306" text-anchor="middle" font-size="12.5" fill="#be123c">Time-Series DB &#183; Timestream</text>
+  <text x="1025" y="327" text-anchor="middle" font-size="11" fill="#64748b">Recent data for live</text>
+  <text x="1025" y="343" text-anchor="middle" font-size="11" fill="#64748b">dashboards &#38; fast queries</text>
+
+  <!-- B6 Cold storage -->
+  <rect x="900" y="405" width="250" height="105" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="1025" y="433" text-anchor="middle" font-size="15" font-weight="700" fill="#0f3d3a">Cold Storage</text>
+  <text x="1025" y="454" text-anchor="middle" font-size="12.5" fill="#1d4ed8">Data Lake &#183; Amazon S3</text>
+  <text x="1025" y="475" text-anchor="middle" font-size="11" fill="#64748b">Low-cost archive of all</text>
+  <text x="1025" y="491" text-anchor="middle" font-size="11" fill="#64748b">historical telemetry</text>
+
+  <!-- bottom note -->
+  <rect x="30" y="555" width="1120" height="85" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="50" y="582" font-size="13" font-weight="700" fill="#0f3d3a">Why this design solves AeroGrid&#8217;s two problems</text>
+  <text x="50" y="606" font-size="12" fill="#334155">1.  Legacy server overload &#8594; Kafka / Kinesis absorbs the high-volume, non-stop stream and decouples ingestion from processing, so no readings are lost.</text>
+  <text x="50" y="627" font-size="12" fill="#334155">2.  Warning signs buried in logs &#8594; Lambda flags anomalies in real time and alerts engineers instantly, rather than discovering failures after they happen.</text>
+</svg>
