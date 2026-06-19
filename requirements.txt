@@ -1,0 +1,5 @@
+# Python dependencies for the AeroGrid anomaly-detection script.
+# pandas is the only library we need - it reads and analyses the CSV.
+# The version is pinned so every build is reproducible: anyone who builds this
+# image gets the exact same pandas, avoiding "it works on my machine" issues.
+pandas==2.2.2
